@@ -47,9 +47,9 @@ To use the my edited test JSON file (`editedData.json`), update **`src/mock/inde
    import data1 from "./editedData.json";
    ```
 4. **Change Line 10**:  
-  ```js
-  hotels: data1.results
-  ```
+   ```js
+   hotels: data1.results
+   ```
 4. Ensure `editedData.json` is properly imported and used instead of the default dataset.
 
 ---
