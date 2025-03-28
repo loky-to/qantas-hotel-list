@@ -1,0 +1,11 @@
+cc8a502 - Loky, 84 seconds ago : DOC | update readme file to include instructions, approach, considerations
+bb62d3d - Loky, 22 minutes ago : FEAT | add styles and scss files
+3085450 - Loky, 22 minutes ago : FEAT | add HotelPage -> updated from App and main.js
+07c2cf9 - Loky, 33 minutes ago : FEAT | add HotelListing container
+269e2c4 - Loky, 60 minutes ago : FEAT | build HotelListingItem
+1c834ec - Loky, 2 hours ago : FEAT | build global BaseHeader and feat HotelHeader
+2e40809 - Loky, 3 hours ago : FEAT | build drop down and setup store
+34644f0 - Loky, 4 hours ago : SETUP | remove unnecessary files and rename main app
+f2403c7 - Loky, 4 hours ago : SETUP | add assets
+2999786 - Loky, 4 hours ago : SETUP | environment setup
+db8da25 - Loky, 4 hours ago : init
