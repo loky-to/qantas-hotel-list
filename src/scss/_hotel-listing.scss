@@ -1,0 +1,15 @@
+@use '../shared-scss/colours' as *;
+
+.hotel-listing {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $color-grey;
+
+    .hotel-listing-item {
+        margin-bottom: 8px;
+
+        &:last-child {
+            margin-bottom: 4px;
+        }
+    }
+}
