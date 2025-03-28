@@ -1,0 +1,9 @@
+// global
+@use '../shared-scss/base-header' as *;
+@use '../shared-scss/field-select' as *;
+
+// import component scss
+@use '../scss/hotel-header' as *;
+@use '../scss/hotel-page' as *;
+@use '../scss/hotel-listing' as *;
+@use '../scss/hotel-listing-item' as *;
