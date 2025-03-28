@@ -1,0 +1,166 @@
+@use '../shared-scss/colours' as *;
+
+.hotel-listing-item {
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+
+    &__lhs {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    &__lhs-image {
+        display: block;
+        width: 200px;
+        height: 160px;
+        max-width: 200px;
+        min-width: 200px;
+        background-size: cover;
+        background-position: center center;
+        z-index: 0;
+        margin-right: 16px;
+    }
+
+    &__lhs-promo-banner {
+        display: flex;
+        position: relative;
+        top: 8px;
+        left: 0;
+        background-color: white;
+        padding: 4px 8px;
+        width: fit-content;
+
+        span {
+            font-size: 14px;
+            font-weight: 600;
+            color: $color-red;
+        }
+    }
+
+    &__rhs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        border-top: 1px solid $color-grey;
+    }
+
+    &__rhs-details {
+        display: flex;
+        flex-direction: column;
+        margin-top: 8px;
+        max-width: 480px;
+    }
+
+    &__rhs-details-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        span {
+            font-size: 22px;
+            font-weight: 500;
+            color: black;
+            // ellipsis
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &__rhs-details-address {
+        font-size: 14px;
+        color: $color-lightgrey;
+        margin-top: 2px;
+    }
+
+    &__rhs-details-room-type {
+        margin-top: 12px;
+        font-size: 14px;
+        text-decoration: underline;
+        color: $color-red;
+    }
+
+    &__rhs-details-cancellation {
+        font-size: 14px;
+        color: $color-green;
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+
+    &__rhs-rating {
+        display: flex;
+        align-items: center;
+        margin-left: 8px;
+
+        &.circles .hotel-listing-item__rhs-rating-shape {
+            clip-path: circle(40% at 50% 50%);
+        }
+
+        .filled {
+            background: gold;
+        }
+
+        .half {
+            background: linear-gradient(to right, gold 50%, lightgray 50%);
+        }
+    }
+
+    &__rhs-rating-shape-wrapper {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        margin-right: 2px;
+    }
+
+    &__rhs-rating-shape {
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        background: lightgray;
+        // default star shape
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+
+    &__rhs-price-details {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    &__rhs-currency {
+        margin-top: 48px;
+        font-size: 14px;
+        color: black;
+    }
+
+    &__rhs-price {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        color: black;
+    }
+
+    &__rhs-price-symbol {
+        font-size: 14px;
+        margin-right: 4px;
+    }
+
+    &__rhs-price-amount {
+        font-size: 28px;
+    }
+
+    &__rhs-savings {
+        font-size: 17px;
+        color: $color-red;
+        display: inline-block;
+    }
+
+    &__rhs-savings-super {
+        font-size: 0.75em;
+        vertical-align: super;
+    }
+}
