@@ -37,16 +37,28 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## **Using Test Data**
 To use the my edited test JSON file (`editedData.json`), update **`src/mock/index.js`**:
 
-- **Change Line 10**:  
-  ```js
-  hotels: data1.results
-  ```
-- Ensure `editedData.json` is properly imported and used instead of the default dataset.
+1. **Locate Lines 3 and 4** in `index.js`.  
+2. **Comment out Line 3**:  
+   ```js
+   // import data from "./data.json";
+   ```
+3. **Uncomment Line 4**:  
+   ```js
+   import data1 from "./editedData.json";
+   ```
+4. Ensure `editedData.json` is properly imported and used instead of the default dataset.
 
 ---
 
 ## **Approach**  
 The design file was carefully analysed and broken down into reusable Vue components to ensure modularity and scalability. The project is built using **Vue CLI** and **Vuex** for state management.
+
+**Component Breakdown Approach**  
+   - **Feature-level components** were created for elements specific to this project, such as the `HotelListing`, which is tailored to display hotel search results.  
+   - **Global components** were created for elements that could be reused elsewhere, such as:  
+     - `FormFields`: A reusable form input component that includes dropdowns and can be expanded to other input types such as search bar and text input.  
+     - `FieldSelect`: A reusable dropdown component that can be styled dynamically.  
+   - This approach ensures **scalability** and **code reusability**, making the application easier to maintain and expand.
 
 ### **Component Breakdown**  
 1. **Header Section**  
@@ -59,7 +71,7 @@ The design file was carefully analysed and broken down into reusable Vue compone
 2. **Sorting Dropdown**  
    - Implemented as a **global component** called `FormFields` to handle various form elements such as dropdowns, text inputs, and search boxes.  
    - `FormFields` contains another global component, `FieldSelect`, which manages the dropdown functionality.  
-   - A **field object** is passed into `FieldSelect`, allowing customization of colours, sizes, and styles.  
+   - A **field object** is passed into `FieldSelect`, allowing customisation of colours, sizes, and styles.  
 
 3. **Hotel Listings**  
    - The hotel listing is composed of:  
@@ -89,9 +101,15 @@ The design file was carefully analysed and broken down into reusable Vue compone
 ### **Data Filtering**  
 - Assumes that all data is in the **same currency**.  
 
+### **Styles**  
+- In a production environment, a **global styles file** would typically be used to manage colours and fonts.  
+- For this exercise, I created a **global colours file** and a **global components file** to centralise SCSS styles.  
+- A global fonts file was not created. Ideally, font sizes would be managed using a mixin, but due to time constraints, font sizes were manually added where needed. 
+
 ### **Scrolling Behaviour**  
 - A **scrollbar** was not added due to time limitations.  
 - If implemented, it should be applied to the `HotelListing` component so that the **header remains sticky**.  
+- This enhances the **user experience**, preventing users from having to scroll back to the top to change sorting options or click the Qantas logo to return to the homepage.  
 
 ### **Room Type Link**  
 - The **room type (red underlined text)** is not currently clickable.  
@@ -104,6 +122,9 @@ The design file was carefully analysed and broken down into reusable Vue compone
 ### **Hotel Images**  
 - The image URLs in `data.json` are randomised, resulting in **identical images across all hotels**.  
 - In production, specific images should be provided.  
+
+### **Rating fill**
+- Due to time constraints, only empty, half-filled, and fully filled stars/circles were implemented.
 
 ---
 
